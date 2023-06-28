@@ -2179,7 +2179,7 @@ document.addEventListener('click', function(event) {
             let isOnline = existVoice >= 2;
             let voicesEle = document.getElementById("preSetSpeech");
             // 支持中文和英文
-            voices = isOnline ? voices.filter(item => item.Locale.match(/^(zh-|en-)/)) : voices.filter(item => item.lang.match(/^(zh-|en-)/));
+            voices = isOnline ? voices.filter(item => item.Locale.match(/^(ru-|en-|zh-)/)) : voices.filter(item => item.lang.match(/^(ru-|en-|zh-)/));
             if (isOnline) {
                 voices.map(item => {
                     item.name = item.FriendlyName || (`${item.DisplayName} Online (${item.VoiceType}) - ${item.LocaleName}`);
@@ -5027,23 +5027,6 @@ document.addEventListener('click', function(event) {
         }
         loadPrompt();
     </script>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(94104875, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/94104875" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
