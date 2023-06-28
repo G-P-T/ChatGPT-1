@@ -2188,13 +2188,13 @@ document.addEventListener('click', function(event) {
             }
             voices.sort((a, b) => {
                 if (a.lang.slice(0, 2) === b.lang.slice(0, 2)) {
-                    if (a.lang.slice(0, 2) === "zh") {
+                    if (a.lang.slice(0, 2) === "ru") {
                         return (a.lang === b.lang) ? 0 : (a.lang > b.lang) ? 1 : -1; // zh-CN 在前
                     } else {
                         return 0
                     }
                 }
-                return (locale === "zh" ? (a.lang < b.lang) : (a.lang > b.lang)) ? 1 : -1; // 中文UI，则中文"z"在前
+                return (locale === "ru" ? (a.lang < b.lang) : (a.lang > b.lang)) ? 1 : -1; // 中文UI，则中文"z"在前
             });
             voices.map(item => {
                 if (item.name.match(/^(Google |Microsoft )/)) {
