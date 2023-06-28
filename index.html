@@ -1690,7 +1690,7 @@ document.addEventListener('click', function(event) {
                 };
                 let localLangIdx = 0;
                 let localDiaIdx = 0;
-                let localRecLang = localStorage.getItem("voiceRecLang") || "cmn-Hans-CN";
+                let localRecLang = localStorage.getItem("voiceRecLang") || "ru-RU";
                 if (localRecLang) {
                     let localIndex = langs.findIndex(item => {
                         let diaIdx = item.findIndex(lang => {return lang instanceof Array && lang[0] === localRecLang});
