@@ -14,8 +14,10 @@
     <link rel="manifest" crossorigin="use-credentials" href="manifest.json">
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png" sizes="144x144">
-    <title>ChatGPT</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Чат GPT X</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script>
         let themeMode; // 2: 自动， 1: 浅色，0: 深色
         let autoThemeMode; // 1: 跟随系统，0:自定义时间
@@ -69,6 +71,28 @@
 </head>
 
 <body>
+<div id="popup">
+  <h2>На основе истории данных интернет...</h2>
+  <p>Чат GPT X умеет шутить 🤣, играть, тренировать, писать сочинения и рассказывать сказки, объяснять научные концепции простым языком, писать рабочий программный код 💻, и многое другое...</p>
+</div>
+<script>
+// Проверяем, есть ли запись в localStorage о том, что окно больше не нужно показывать
+if (!localStorage.getItem('hidePopup')) {
+  // Если записи нет, показываем всплывающее окно
+  document.getElementById('popup').style.display = 'block';
+}
+
+// При клике в любом месте на странице
+document.addEventListener('click', function(event) {
+  // Если клик был не на всплывающем окне и его содержимом
+  if (!event.target.closest('#popup')) {
+    // Скрываем всплывающее окно
+    document.getElementById('popup').style.display = 'none';
+    // Записываем в localStorage информацию о том, что окно больше не нужно показывать
+    localStorage.setItem('hidePopup', true);
+  }
+});
+</script>
     <div style="display: none">
         <svg>
             <symbol viewBox="0 0 24 24" id="optionIcon">
@@ -336,7 +360,7 @@
                     <div class="button minimize"></div>
                     <div class="button maximize"></div>
                 </div>
-                <div class="title"><span>ChatGPT</span></div>
+                <div class="title"><span>Чат GPT X</span></div>
                 <div class="settings">
                     <button class="setBtn" id="toggleFull" data-i18n-window title>
                         <svg width="30" height="30">
@@ -1337,7 +1361,7 @@
                 "second": "с",
                 "keepListenMic": "Слушать",
                 "send": "➤",
-                "askTip": "Введите сообщение здесь",
+                "askTip": "Пишите, что хотите)",
                 "clearChat": "Очистить чат",
                 "general": "Общие",
                 "hotkey": "Горячие клавиши",
