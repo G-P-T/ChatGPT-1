@@ -2,11 +2,13 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 440px;
+    max-width: 90%;
+    padding: 17px;
+    border-radius: 17px;
+    transform: translate(-50%,-50%);
     background-color: #343541;
     color: #fff;
-    /* border: 1px solid #ccc; */
-    /* box-shadow: 0 0 10px rgb(0 0 0 / 10%); */
     z-index: 99999;
 }
 
